@@ -66,7 +66,7 @@ export default function App() {
       <div className='main-container'>
         <div className='main-header'>
           {/*左标题*/}
-          <span className='menu-link-main'>CK Music Play</span>
+          <span className='menu-link-main'>Fruity Music Play</span>
           {/*tabs*/}
           <div className='header-menu'>
             {headerLink.map((item, idx) => (
