@@ -1,7 +1,8 @@
-import MkTable from '@/components/Mk-Table/Mk-Table'
+import KingTable from '@/components/King-Table/King-Table'
 import { httpGet } from '@/utils/http'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
+import LazyImage from '../../components/LazyImage'
 
 export default function App() {
   const [song, setSong] = useState([])
@@ -111,7 +112,7 @@ export default function App() {
                 </Button>
               </div>
             </div>
-            <img src='ck-bg.jpg' height={230} />
+            <LazyImage src='ck-bg.jpg' height={230} />
           </div>
           {/*歌单*/}
           <div className='content-section'>
@@ -123,7 +124,7 @@ export default function App() {
                   key={item.id}
                   onClick={() => Navigate('/playlist?id=' + item.id)}
                 >
-                  <img
+                  <LazyImage
                     className='song-img yx-shadow'
                     src={`${item.coverImgUrl}?param=300y300`}
                   />
@@ -140,7 +141,7 @@ export default function App() {
           {song.length > 0 && (
             <div className='content-section'>
               <div className='content-section-title'>单曲</div>
-              <MkTable data={song} style={{ maxHeight: '40vh' }} />
+              <KingTable data={song} style={{ maxHeight: '40vh' }} />
             </div>
           )}
         </div>

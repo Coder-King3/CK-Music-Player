@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { buildPage } from "@/utils/Constructdata";
+import LazyImage from "../../../components/LazyImage";
 
 export default function SongList({ data, idx }) {
   const Navigate = useNavigate();
@@ -18,7 +19,7 @@ export default function SongList({ data, idx }) {
             key={item.id}
             onClick={() => toPage(item)}>
             <span>
-              <img
+              <LazyImage
                 src={
                   item.picUrl ||
                   item.coverImgUrl ||

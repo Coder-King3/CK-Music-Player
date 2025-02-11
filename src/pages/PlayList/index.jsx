@@ -8,8 +8,9 @@ import {
     MessageOutlined,
 } from "@ant-design/icons";
 import { timestamp } from "@/utils/FormatTime";
-import MkTable from "@/components/Mk-Table/Mk-Table";
+import KingTable from "@/components/King-Table/King-Table";
 import Comment from "@/components/comment/index";
+import LazyImage from "../../components/LazyImage";
 
 export default function PlayList() {
     const [searchParams] = useSearchParams();
@@ -25,7 +26,7 @@ export default function PlayList() {
         {
             key: "1",
             label: "歌单",
-            children: <MkTable data={chapterList}
+            children: <KingTable data={chapterList}
                 style={{ maxHeight: "55vh" }} />,
         },
         {
@@ -73,7 +74,7 @@ export default function PlayList() {
                         <Row>
                             <Col span={6}>
                                 <div className="cover">
-                                    <img src={plObj.coverImgUrl}
+                                    <LazyImage src={plObj.coverImgUrl}
                                         alt="" />
 
                                 </div>

@@ -1,4 +1,4 @@
-import MkTable from '@/components/Mk-Table/Mk-Table.jsx'
+import KingTable from '@/components/King-Table/King-Table.jsx'
 
 export default function single({ data }) {
   return (
@@ -7,7 +7,7 @@ export default function single({ data }) {
       {
         <div className='content-section mt-10'>
           {/* <div className="content-section-title">Album</div> */}
-          <MkTable data={data} style={{ maxHeight: '55vh' }} />
+          <KingTable data={data} style={{ maxHeight: '55vh' }} />
         </div>
       }
     </>

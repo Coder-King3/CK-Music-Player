@@ -3,6 +3,7 @@ import { Avatar, Col, Row } from 'antd'
 import { useEffect, useState } from 'react'
 import { httpGet } from '@/utils/http.js'
 import { useNavigate } from 'react-router-dom'
+import LazyImage from '../../components/LazyImage'
 
 const MusicLibrary = () => {
   // 示例数据
@@ -98,7 +99,7 @@ const MusicLibrary = () => {
               key={item.id}
               onClick={() => Navigate('/playlist?id=' + item.id)}
             >
-              <img className='songlist-img' src={item.coverImgUrl} />
+              <LazyImage className='songlist-img' src={item.coverImgUrl} />
               <div className='songlist-title'>
                 <div>{item.name}</div>
               </div>

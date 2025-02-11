@@ -11,6 +11,7 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import ReactPlayer from "react-player";
+import LazyImage from "../../components/LazyImage";
 
 export default function Moviedetails() {
   const [searchParams] = useSearchParams();
@@ -41,7 +42,7 @@ export default function Moviedetails() {
             <Row>
               <Col span={6}>
                 <div className="cover">
-                  <img src={mvobj.cover}
+                  <LazyImage src={mvobj.cover}
                     alt="" />
                   <div className="mt-10">
                     <Button

@@ -1,5 +1,5 @@
 import './style.scss'
-import { ConfigProvider, Slider } from 'antd'
+import { ConfigProvider, Slider, Spin } from 'antd'
 import {
   PauseCircle,
   PlayCircle,
@@ -24,6 +24,9 @@ export default function MiniPlayer() {
     handlePrevClick,
     handleNextClick,
     handleShuffleClick,
+    // lyricList,
+    // lineHeights,
+    // currentLine
   } = useContext(MusicPlayerContext)
 
   function SliderChange(e) {
@@ -97,19 +100,19 @@ export default function MiniPlayer() {
             </div>
           </div>
           {/*歌词*/}
-          {/*<div className="lyrics-container">*/}
-          {/*    {lyricList.length > 0 ?*/}
-          {/*        <ul className="w-full" style={{transform: `translateY(${lineHeights}px)`}}>*/}
-          {/*            {lyricList.map((item, idx) => (*/}
-          {/*                <li className={`text-sm text-center py-1 ${idx === currentLine ? 'active text-lg font-semibold text-foreground/100  transition-all py-1.5' : 'text-foreground/60'}`}*/}
-          {/*                    key={item.time}*/}
-          {/*                >*/}
-          {/*                    <p>{item.lrc}</p>*/}
-          {/*                    <p>{item.tlyric}</p>*/}
-          {/*                </li>*/}
-          {/*            ))}*/}
-          {/*        </ul> : <Spin className="flex item-center h-full"/>}*/}
-          {/*</div>*/}
+          {/* <div className="lyrics-container">
+             {lyricList.length > 0 ?
+                 <ul className="w-full" style={{transform: `translateY(${lineHeights}px)`}}>
+                     {lyricList.map((item, idx) => (
+                         <li className={`text-sm text-center py-1 ${idx === currentLine ? 'active text-lg font-semibold text-foreground/100  transition-all py-1.5' : 'text-foreground/60'}`}
+                             key={item.time}
+                         >
+                             <p>{item.lrc}</p>
+                             <p>{item.tlyric}</p>
+                         </li>
+                     ))}
+                 </ul> : <Spin className="flex item-center h-full"/>}
+          </div> */}
         </div>
       </div>
     </div>
